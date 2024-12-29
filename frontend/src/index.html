@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Рассчёт стоимости доставки</title>
+</head>
+
+<body class="page">
+  <header class="header">
+    <div class="header__content">
+    <img class="header__logo" src="<%= require('./static/images/logo.svg')%>">
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-elem">
+          <a class="header__nav-link" href="#">Частным лицам</a>
+        </li>
+        <li class="header__nav-elem">
+          <a class="header__nav-link" href="#">Бизнесу</a>
+        </li>
+        <li class="header__nav-elem">
+          <a class="header__nav-link" href="#">Интернет-магазинам</a>
+        </li>
+        <li class="header__nav-elem">
+          <a class="header__nav-link" href="#">О нас</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="header__nav-link header__tel" href="tel:+78000000000">8-800-000-00-00</a>
+  </div>
+  </header>
+  <main class="main">
+    <div class="about__content">
+    <form id="reqForm">
+      <div class="textinput">
+        <label class="textinput__label">Откуда</label>
+        <select id="from" class="from__preset">
+          <option value="" disabled selected hidden>Выберите пункт отправления</option>
+        </select>
+      </div>
+      <div class="textinput">
+        <label class="label">Куда</label>
+        <select id="to" class="to__preset">
+          <option value="" disabled selected hidden>Выберите пункт назначения</option>
+        </select>
+      </div>
+      <p class="about__text">Расскажите больше о вашем грузе</p>
+      <div class="textinput">
+        <label class="label">Параметры груза</label>
+        <select id="preset" class="about__preset">
+          <option value="" disabled selected hidden>Укажите размер груза</option>
+          <option value="custom">Свой размер</option>
+        </select>
+      </div>
+      <fieldset class="modifiers__fieldset">
+        <div class="modifiers__checkbox">
+          <input type="checkbox">
+          <label class="modifiers__label">Хрупкий груз</label>
+        </div>
+        <div class="modifiers__checkbox">
+          <input type="checkbox">
+          <label class="modifiers__label">Жидкий груз</label>
+        </div>
+      </fieldset>
+      <fieldset id="customSize" class="custom__fieldset hidden">
+        <label class="textinput__label">Длина, см</label>
+        <input id="len" class="textinput__input" type="number" min="1">
+        <label class="textinput__label">Ширина, см</label>
+        <input id="width" class="textinput__input" type="number" min="1">
+        <label class="textinput__label">Глубина, см</label>
+        <input id="depth" class="textinput__input" type="number" min="1">
+        <label class="textinput__label">Масса, кг</label>
+        <input id="weight" class="textinput__input" type="number" min="0.01" step="0.01">
+      </fieldset>
+    </form>
+    <button type="button" class="button button-calculate">Рассчитать доствку</button>
+    <div class="result hidden">
+      <p class="result__text">asdasd</p>
+    </div>
+    </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__info">
+      <h2 class="footer__header">Дополнительная информация</h2>
+      <nav class="footer__info-nav">
+        <ul class="footer__info-list">
+          <li class="footer__info-element">
+            <a class="footer__info-link">Контакты</a>
+          </li>
+          <li class="footer__info-element">
+            <a class="footer__info-link">Реквизиты</a>
+          </li>
+          <li class="footer__info-element">
+            <a class="footer__info-link">Карта сайта</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__support">
+      <h2 class="footer__header">Поддержка</h2>
+      <nav class="footer__info-nav">
+        <ul class="footer__support-list">
+          <li class="footer__support-element">
+            <a class="footer__support-link">Частые вопросы</a>
+          </li>
+          <li class="footer__support-element">
+            <a class="footer__support-link">
+              <div class="footer__tg-container">
+                <img class="footer__tg-image" src="<%= require('./static/images/tg-logo.svg')%>">
+                <p class="footer__tg-text">Написать в чат</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </footer>
+</body>

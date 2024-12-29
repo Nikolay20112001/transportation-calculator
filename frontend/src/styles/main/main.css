@@ -1,0 +1,24 @@
+.main {
+  background-color: #FFFFFF;
+  /*height: min(fit-content, calc(100vh - 72px - 268px));*/
+  height: fit-content;
+  min-height: calc(100vh - 72px - 268px);
+  font-family: 'monsterrat';
+  width: 952px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.about__content {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.about__text{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}

@@ -1,0 +1,43 @@
+.footer {
+  background-color: var(--accent-color);
+  height: 268px;
+  position: sticky;
+  bottom: 0;
+  color: var(--light-text-color);
+
+  padding: 50px 150px;
+  font-family: 'monsterrat';
+  font-size: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.footer__info {
+}
+
+.footer__support {
+  grid-column-start: 3;
+}
+
+.footer__header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.footer__info-element {
+  margin-bottom: 9px;
+}
+
+.footer__tg-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.footer__tg-text {
+  display: inline;
+}
