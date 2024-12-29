@@ -1,0 +1,14 @@
+@import url('global.css');
+@import url('./../static/fonts/fonts.css');
+@import url('variables.css');
+@import url('./header/header.css');
+@import url('./footer/footer.css');
+@import url('./main/main.css');
+@import url('./button/button.css');
+@import url('./textinput/textinput.css');
+@import url('./modifiers.css');
+@import url('./fieldset/fieldset.css');
+@import url('./modifiers/modifiers.css');
+@import url("./select/select.css");
+@import url("./custom/custom.css");
+@import url("./result/result.css");

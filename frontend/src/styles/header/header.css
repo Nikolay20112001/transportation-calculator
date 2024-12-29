@@ -1,0 +1,43 @@
+.header {
+  background-color: var(--accent-color);
+  height: 72px;
+  position: sticky;
+  top: 0;
+  color: var(--light-text-color);
+  font-family: 'monsterrat';
+  font-weight: normal;
+  padding: 12px 100px;
+  text-transform: uppercase;
+
+}
+
+.header__content {
+  margin: auto;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr auto 3fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.header__logo {
+  display: inline;
+}
+
+.header__nav {
+  display: inline;
+  font-size: 20px;
+}
+
+.header__nav-list {
+  display: inline-flex;
+  gap: 25px;
+}
+.header__nav-elem {
+  display: inline;
+}
+
+.header__tel {
+  font-size: 34px;
+  padding-left: 30px;
+}

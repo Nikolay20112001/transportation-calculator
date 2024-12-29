@@ -85,7 +85,7 @@ export class DeliveryCostCalculator {
     }
   }
 
-  private calculateInterpolatedSizeCoef(width: number, height: number, depth: number, weight: number): number {
+  private calculateStrictSizeCoef(width: number, height: number, depth: number, weight: number): number {
     const volume = width * height * depth;
 
     if (weight > 100) throw new AppError(ErrorsDescriptions.OVERWEIGHT_ERROR, true, null, HttpStatusCode.BAD_REQUEST);
@@ -101,7 +101,7 @@ export class DeliveryCostCalculator {
     return Math.pow(1.005, distanceInThousands);
   }
 
-  private calculateStrictSizeCoef(width: number, height: number, depth: number, weight: number): number {
+  private calculateTemplateSizeCoef(width: number, height: number, depth: number, weight: number): number {
     const size = this.sizePricing.find(
       (size) => width === size.width && height === size.height && depth === size.depth && weight <= size.maxWeight
     );
@@ -126,7 +126,7 @@ export class DeliveryCostCalculator {
     if (isStrict) {
       sizeCoef = this.calculateStrictSizeCoef(width, height, depth, weight);
     } else {
-      sizeCoef = this.calculateInterpolatedSizeCoef(width, height, depth, weight);
+      sizeCoef = this.calculateTemplateSizeCoef(width, height, depth, weight);
     }
 
     const distanceCoef = this.calculateDistanceCoef(distance);

@@ -1,0 +1,9 @@
+.modifiers__fieldset {
+  display: flex;
+  gap: 136px;
+}
+
+.modifiers__label {
+  font-size: 20px;
+}
+

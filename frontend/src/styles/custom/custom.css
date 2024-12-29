@@ -1,0 +1,10 @@
+.custom__fieldset {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: min-content min-content;
+  grid-auto-flow: column;
+  column-gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'monsterrat';
+  src: url(./monsterrat/Montserrat-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'monsterrat';
+  src: url(./monsterrat/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
