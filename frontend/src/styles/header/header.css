@@ -1,6 +1,6 @@
 .header {
   background-color: var(--accent-color);
-  height: 72px;
+  height: min(72px, min-content);
   position: sticky;
   top: 0;
   color: var(--light-text-color);
