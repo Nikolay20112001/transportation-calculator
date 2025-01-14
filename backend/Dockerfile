@@ -1,11 +1,15 @@
 FROM node:16-alpine
 
-WORKDIR /usr/src/app
-
-COPY package.json .
+COPY package.json ./
 RUN npm install
 
-COPY /src/index.ts ./
+COPY src ./src
+COPY tsconfig.json ./tsconfig.json
+
+RUN npm run build
+
+ENV NODE_ENV=production
 
 EXPOSE 8010
-CMD [ "npm", "run", "dev" ]
+
+CMD ["npm", "start"]

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   displayName: 'unit',
   clearMocks: true,
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
