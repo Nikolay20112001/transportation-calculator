@@ -1,13 +1,19 @@
-FROM node:16-alpine
-WORKDIR /usr/src/app
+FROM node:18 AS build
 
-COPY package.json .
-COPY package-lock.json .
-COPY tsconfig.json .
-COPY webpack.config.js .
-COPY /src/ ./src/
+WORKDIR /app
+
+COPY package*.json ./
+
 RUN npm install
-EXPOSE 8080
 
-#RUN npm run dev
-CMD [ "npm", "run", "dev" ]
+COPY . .
+
+RUN npm run build
+
+FROM nginx:alpine
+
+COPY --from=build /app/dist /usr/share/nginx/html
+
+EXPOSE 3001
+
+CMD ["nginx", "-g", "daemon off;"]
