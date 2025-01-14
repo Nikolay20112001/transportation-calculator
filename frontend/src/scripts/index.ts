@@ -9,6 +9,17 @@ const calculateButtonSelector: Element =
   document.querySelector(".button-calculate");
 const requestForm: HTMLFormElement = document.querySelector("#reqForm");
 
+const fieldNamesRu = new Map<string, string>(
+  [
+    ["from", "Откуда"],
+    ["to", "Куда"],
+    ["preset", "Параметры груза"],
+    ["len", "Длина"],
+    ["width", "Ширина"],
+    ["depth", "Глубина"],
+    ["weight", "Масса"],
+  ]
+)
 const _api_url = process.env.API_URL
   ? process.env.API_URL
   : "http://127.0.0.1:8010/api/delivery";
@@ -48,7 +59,7 @@ function calculateHandler() {
   const errorElement = simpleValidation();
 
   if (errorElement) {
-    showMessage(`Не заполнено поле ${errorElement.id}`);
+    showMessage(`Не заполнено поле \"${fieldNamesRu.get(errorElement.id)}\"`);
     return;
   }
 
