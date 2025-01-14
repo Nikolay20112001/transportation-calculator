@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b7ffd15-bcfc-4eb0-a962-a3a25f4fee9c" name="Changes" comment="Move backend project">
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile-dev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/jest.integration.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/jest.integration.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/jest.unit.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/jest.unit.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/__tests__/integration/calculateCost.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/__tests__/integration/calculateCost.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/__tests__/unit/calculateCost.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/__tests__/unit/calculateCost.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/utils/calculateCost.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/utils/calculateCost.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Elayd&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Nikolay20112001/transportation-calculator.git&quot;,
+    &quot;accountId&quot;: &quot;0adcbf8b-ff86-4fdf-a6fb-96041866e7aa&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2q4y2QpD5xuqq2YOQN7Uf8r4Ymj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Jest.DeliveryCostCalculator - calculateCost UNITS.should calculate the cost correctly in template mode fifth case.executor": "Run",
+    "Jest.DeliveryCostCalculator - calculateCost UNITS.should calculate the cost correctly in template mode first case.executor": "Run",
+    "Jest.DeliveryCostCalculator - calculateCost UNITS.should calculate the cost correctly in template mode fouth case.executor": "Run",
+    "Jest.DeliveryCostCalculator - calculateCost UNITS.should calculate the cost correctly in template mode second case.executor": "Run",
+    "Jest.DeliveryCostCalculator - calculateCost UNITS.should calculate the cost correctly in template mode sixth case.executor": "Run",
+    "Jest.DeliveryCostCalculator - calculateCost UNITS.should calculate the cost correctly in template mode third case.executor": "Run",
+    "Jest.DeliveryCostCalculator - calculateCost UNITS.should fall due Overweight in strict mode.executor": "Run",
+    "Jest.DeliveryCostCalculator - calculateCost UNITS.should fall due overload in template mode.executor": "Run",
+    "Jest.DeliveryCostCalculator - calculateCost UNITS.should fall due oversize in template mode.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "working/deployB",
+    "last_opened_file_path": "/Users/elayd/WebstormProjects/transportation-calculator/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/Users/elayd/WebstormProjects/transportation-calculator/backend/node_modules/jest",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/elayd/WebstormProjects/transportation-calculator/backend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.DeliveryCostCalculator - calculateCost UNITS.should fall due Overweight in strict mode">
+    <configuration name="DeliveryCostCalculator - calculateCost UNITS.should calculate the cost correctly in template mode fifth case" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/backend/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/backend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/backend/src/__tests__/unit/calculateCost.test.ts" />
+      <test-names>
+        <test-name value="DeliveryCostCalculator - calculateCost UNITS" />
+        <test-name value="should calculate the cost correctly in template mode fifth case" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="DeliveryCostCalculator - calculateCost UNITS.should calculate the cost correctly in template mode sixth case" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/backend/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/backend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/backend/src/__tests__/unit/calculateCost.test.ts" />
+      <test-names>
+        <test-name value="DeliveryCostCalculator - calculateCost UNITS" />
+        <test-name value="should calculate the cost correctly in template mode sixth case" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="DeliveryCostCalculator - calculateCost UNITS.should fall due Overweight in strict mode" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/backend/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/backend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/backend/src/__tests__/unit/calculateCost.test.ts" />
+      <test-names>
+        <test-name value="DeliveryCostCalculator - calculateCost UNITS" />
+        <test-name value="should fall due Overweight in strict mode" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="DeliveryCostCalculator - calculateCost UNITS.should fall due overload in template mode" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/backend/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/backend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/backend/src/__tests__/unit/calculateCost.test.ts" />
+      <test-names>
+        <test-name value="DeliveryCostCalculator - calculateCost UNITS" />
+        <test-name value="should fall due overload in template mode" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="DeliveryCostCalculator - calculateCost UNITS.should fall due oversize in template mode" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/backend/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/backend" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/backend/src/__tests__/unit/calculateCost.test.ts" />
+      <test-names>
+        <test-name value="DeliveryCostCalculator - calculateCost UNITS" />
+        <test-name value="should fall due oversize in template mode" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.DeliveryCostCalculator - calculateCost UNITS.should fall due Overweight in strict mode" />
+        <item itemvalue="Jest.DeliveryCostCalculator - calculateCost UNITS.should fall due oversize in template mode" />
+        <item itemvalue="Jest.DeliveryCostCalculator - calculateCost UNITS.should fall due overload in template mode" />
+        <item itemvalue="Jest.DeliveryCostCalculator - calculateCost UNITS.should calculate the cost correctly in template mode sixth case" />
+        <item itemvalue="Jest.DeliveryCostCalculator - calculateCost UNITS.should calculate the cost correctly in template mode fifth case" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b7ffd15-bcfc-4eb0-a962-a3a25f4fee9c" name="Changes" comment="" />
+      <created>1733935935227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733935935227</updated>
+      <workItem from="1733935936486" duration="996000" />
+      <workItem from="1734590330674" duration="39000" />
+      <workItem from="1736833605971" duration="113000" />
+      <workItem from="1736833932214" duration="742000" />
+    </task>
+    <task id="LOCAL-00001" summary="Move backend project">
+      <option name="closed" value="true" />
+      <created>1733936514765</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733936514765</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Move backend project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move backend project" />
+  </component>
+</project>

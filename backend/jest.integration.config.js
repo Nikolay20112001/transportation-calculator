@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   displayName: 'integration',
   clearMocks: true,
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
