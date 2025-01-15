@@ -43,15 +43,10 @@ export const getDeliveryCost = async (req: GetDeliveryCostRequest, res: Response
 
         const distance = await getRouteDistance(fromCoords, toCoords);
 
-        const deliveryCostCalculator = new DeliveryCostCalculator();
-        const cost = deliveryCostCalculator.calculateCost(
-          widthNumber,
-          heightNumber,
-          depthNumber,
-          weightNumber,
-          distance,
-          isStrictMode
-        );
+        const calculatorFactory = new DeliveryCostCalculator();
+        const calculator = calculatorFactory.getCalculator(isStrictMode);
+
+        const cost = calculator.calculateCost(widthNumber, heightNumber, depthNumber, weightNumber, distance);
 
         return { cost: cost.toFixed(2) };
       } catch (error) {
