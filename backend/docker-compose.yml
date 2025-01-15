@@ -10,7 +10,7 @@ services:
     expose:
       - '6380'
     networks:
-      - prod-network
+      - coolify
     restart: unless-stopped
 
   app-prod:
@@ -21,7 +21,7 @@ services:
     ports:
       - 8010:8010
     networks:
-      - prod-network
+      - coolify
     environment:
       - PORT=${PORT:-8010}
       - NODE_ENV=production
@@ -29,5 +29,5 @@ services:
     restart: unless-stopped
 
 networks:
-  prod-network:
-    name: prod-network
+  coolify:
+    external: true
