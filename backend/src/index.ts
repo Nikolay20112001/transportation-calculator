@@ -12,7 +12,6 @@ export const app = express();
 
 export const redisClient = new Redis(process.env.REDIS_URL!);
 
-// todo: поправить корсы под прод
 const corsConfig = {
   origin: true,
   credentials: true

@@ -11,6 +11,10 @@ interface SizePricing {
   weightCoef: number;
 }
 
+interface Calculate {
+  calculateCost(width: number, height: number, depth: number, weight: number, distance: number): number;
+}
+
 export class DeliveryCostCalculator {
   private readonly baseCost = 500;
   private readonly sizePricing: SizePricing[] = [
@@ -21,6 +25,21 @@ export class DeliveryCostCalculator {
     { width: 60, height: 35, depth: 30, maxWeight: 18, sizeCoef: 1.4, weightCoef: 1.45 },
     { width: 60, height: 60, depth: 30, maxWeight: 20, sizeCoef: 1.5, weightCoef: 1.55 }
   ];
+
+  public getCalculator(isStrict: boolean): Calculate {
+    if (isStrict) {
+      return new CalculateStrict(this.baseCost, this.sizePricing);
+    } else {
+      return new CalculateTemplate(this.baseCost, this.sizePricing);
+    }
+  }
+}
+
+class CalculateStrict implements Calculate {
+  constructor(
+    private readonly baseCost: number,
+    private readonly sizePricing: SizePricing[]
+  ) {}
 
   private interpolate(coef1: number, coef2: number, value1: number, value2: number, value: number): number {
     if (value1 === value2) {
@@ -85,23 +104,35 @@ export class DeliveryCostCalculator {
     }
   }
 
-  private calculateStrictSizeCoef(width: number, height: number, depth: number, weight: number): number {
+  private calculateDistanceCoef(distance: number): number {
+    const distanceInThousands = Math.ceil(distance / 10000);
+    return Math.pow(1.005, distanceInThousands);
+  }
+
+  public calculateCost(width: number, height: number, depth: number, weight: number, distance: number): number {
     const volume = width * height * depth;
 
     if (weight > 100) throw new AppError(ErrorsDescriptions.OVERWEIGHT_ERROR, true, null, HttpStatusCode.BAD_REQUEST);
 
-    const sizeCoef = this.calculateVolumeCoef(volume);
-    const weightCoef = this.calculateWeightCoef(weight);
+    const sizeCoef = this.calculateVolumeCoef(volume) * this.calculateWeightCoef(weight);
+    const distanceCoef = this.calculateDistanceCoef(distance);
 
-    return sizeCoef * weightCoef;
+    return this.baseCost * sizeCoef * distanceCoef;
   }
+}
+
+class CalculateTemplate implements Calculate {
+  constructor(
+    private readonly baseCost: number,
+    private readonly sizePricing: SizePricing[]
+  ) {}
 
   private calculateDistanceCoef(distance: number): number {
     const distanceInThousands = Math.ceil(distance / 10000);
     return Math.pow(1.005, distanceInThousands);
   }
 
-  private calculateTemplateSizeCoef(width: number, height: number, depth: number, weight: number): number {
+  public calculateCost(width: number, height: number, depth: number, weight: number, distance: number): number {
     const size = this.sizePricing.find(
       (size) => width === size.width && height === size.height && depth === size.depth && weight <= size.maxWeight
     );
@@ -110,25 +141,7 @@ export class DeliveryCostCalculator {
       throw new AppError(ErrorsDescriptions.NO_TEMPLATE_SIZE_ERROR, true, null, HttpStatusCode.BAD_REQUEST);
     }
 
-    return size.sizeCoef * size.weightCoef;
-  }
-
-  public calculateCost(
-    width: number,
-    height: number,
-    depth: number,
-    weight: number,
-    distance: number,
-    isStrict: boolean
-  ): number {
-    let sizeCoef: number;
-
-    if (isStrict) {
-      sizeCoef = this.calculateStrictSizeCoef(width, height, depth, weight);
-    } else {
-      sizeCoef = this.calculateTemplateSizeCoef(width, height, depth, weight);
-    }
-
+    const sizeCoef = size.sizeCoef * size.weightCoef;
     const distanceCoef = this.calculateDistanceCoef(distance);
 
     return this.baseCost * sizeCoef * distanceCoef;

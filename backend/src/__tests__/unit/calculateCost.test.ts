@@ -1,10 +1,10 @@
 import { DeliveryCostCalculator } from '../../utils/calculateCost';
 
 describe('DeliveryCostCalculator - calculateCost UNITS', () => {
-  let calculator: DeliveryCostCalculator;
+  let calculatorFactory: DeliveryCostCalculator;
 
   beforeEach(() => {
-    calculator = new DeliveryCostCalculator();
+    calculatorFactory = new DeliveryCostCalculator();
   });
 
   it('should calculate the cost correctly in template mode first case', () => {
@@ -15,7 +15,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = false;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('996.23');
   });
@@ -28,7 +29,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = false;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('996.23');
   });
@@ -41,7 +43,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = false;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('1235.00');
   });
@@ -54,7 +57,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = false;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('1444.95');
   });
@@ -67,7 +71,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = false;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('1671.37');
   });
@@ -80,7 +85,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = false;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('1914.25');
   });
@@ -94,7 +100,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const isStrict = false;
 
     expect(() => {
-      calculator.calculateCost(width, height, depth, weight, distance, isStrict);
+      const calculator = calculatorFactory.getCalculator(isStrict);
+      calculator.calculateCost(width, height, depth, weight, distance);
     }).toThrow('NO_TEMPLATE_SIZE_ERROR');
   });
 
@@ -107,7 +114,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const isStrict = false;
 
     expect(() => {
-      calculator.calculateCost(width, height, depth, weight, distance, isStrict);
+      const calculator = calculatorFactory.getCalculator(isStrict);
+      calculator.calculateCost(width, height, depth, weight, distance);
     }).toThrow('NO_TEMPLATE_SIZE_ERROR');
   });
 
@@ -120,7 +128,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const isStrict = true;
 
     expect(() => {
-      calculator.calculateCost(width, height, depth, weight, distance, isStrict);
+      const calculator = calculatorFactory.getCalculator(isStrict);
+      calculator.calculateCost(width, height, depth, weight, distance);
     }).toThrow('OVERWEIGHT_ERROR');
   });
 
@@ -132,7 +141,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = true;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('996.23');
   });
@@ -145,7 +155,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = true;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('996.23');
   });
@@ -158,7 +169,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = true;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('1914.25');
   });
@@ -171,7 +183,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = true;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('2015.83');
   });
@@ -184,7 +197,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = true;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('996.23');
   });
@@ -197,7 +211,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = true;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('1486.12');
   });
@@ -210,7 +225,8 @@ describe('DeliveryCostCalculator - calculateCost UNITS', () => {
     const distance = 993187.7;
     const isStrict = true;
 
-    const cost = calculator.calculateCost(width, height, depth, weight, distance, isStrict).toFixed(2);
+    const calculator = calculatorFactory.getCalculator(isStrict);
+    const cost = calculator.calculateCost(width, height, depth, weight, distance).toFixed(2);
 
     expect(cost).toEqual('1538.22');
   });
